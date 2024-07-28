@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sumOfDigits(number) {
+  let sum = 0;
+
+  while (number > 0) {
+    let lastDigit = number % 10;
+
+    sum += lastDigit;
+
+    number = Math.floor(number / 10);
+  }
+
+  return sum;
+}
+let num = 12345;
+let result = sumOfDigits(num);
+console.log("The sum of digits in", num, "is", result);
+    </script>
+</body>
+</html>

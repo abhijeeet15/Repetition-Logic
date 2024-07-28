@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let choice;
+
+do {
+  console.log("Menu:");
+  console.log("1. Add two numbers");
+  console.log("2. Subtract two numbers");
+  console.log("3. Multiply two numbers");
+  console.log("4. Divide two numbers");
+  console.log("5. Exit");
+
+  choice = parseInt(prompt("Enter your choice:"));
+
+  switch (choice) {
+    case 1:
+      let num1 = parseFloat(prompt("Enter the first number:"));
+      let num2 = parseFloat(prompt("Enter the second number:"));
+      console.log("Sum:", num1 + num2);
+      break;
+    case 2:
+      let num3 = parseFloat(prompt("Enter the first number:"));
+      let num4 = parseFloat(prompt("Enter the second number:"));
+      console.log("Difference:", num3 - num4);
+      break;
+    case 3:
+      let num5 = parseFloat(prompt("Enter the first number:"));
+      let num6 = parseFloat(prompt("Enter the second number:"));
+      console.log("Product:", num5 * num6);
+      break;
+    case 4:
+      let num7 = parseFloat(prompt("Enter the first number:"));
+      let num8 = parseFloat(prompt("Enter the second number:"));
+      if (num8 === 0) {
+        console.log("Error: Division by zero");
+      } else {
+        console.log("Quotient:", num7 / num8);
+      }
+      break;
+    case 5:
+      console.log("Exiting program...");
+      break;
+    default:
+      console.log("Invalid choice");
+  }
+
+} while (choice !== 5);
+
+    </script>
+</body>
+</html>

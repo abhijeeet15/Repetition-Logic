@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(str) {
+  let left = 0;
+  let right = str.length - 1;
+  let isPalindrome = true;
+
+  do {
+    if (str[left] !== str[right]) {
+      isPalindrome = false;
+      break;
+    }
+    left++;
+    right--;
+  } while (left < right);
+
+  return isPalindrome;
+}
+
+let word = "racecar";
+if (isPalindrome(word)) {
+  console.log(word + " is a palindrome");
+} else {
+  console.log(word + " is not a palindrome");
+}
+
+    </script>
+</body>
+</html>

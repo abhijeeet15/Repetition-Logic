@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let attempts = 3;
+let isLoggedIn = false;
+
+do {
+  let username = prompt("Enter your username:");
+  let password = prompt("Enter your password:");
+
+  if (username === "yourUsername" && password === "yourPassword") {
+    console.log("Login successful!");
+    isLoggedIn = true;
+  } else {
+    console.log("Incorrect username or password.");
+    attempts--;
+    console.log("You have", attempts, "attempts left.");
+  }
+
+} while (!isLoggedIn && attempts > 0);
+
+if (isLoggedIn) {
+  console.log("Welcome!");
+} else {
+  console.log("Too many failed attempts. Account locked.");
+}
+    </script>
+</body>
+</html>

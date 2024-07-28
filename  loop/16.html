@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let shouldContinue = true;
+
+while (shouldContinue) {
+  let num1 = parseFloat(prompt("Enter the first number:"));
+  let operator = prompt("Enter an operator (+, -, *, /):");
+  let num2 = parseFloat(prompt("Enter the second number:"));
+
+  let result;
+
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      if (num2 === 0) {
+        console.log("Error: Division by zero");
+      } else {
+        result = num1 / num2;
+      }
+      break;
+    default:
+      console.log("Invalid operator");
+      continue;
+  }
+
+  console.log("Result:", result);
+
+  let answer = prompt("Do you want to continue? (yes/no)");
+  shouldContinue = answer.toLowerCase() === "yes";
+}
+    </script>
+</body>
+</html>

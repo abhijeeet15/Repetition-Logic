@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findPrimeNumbers(maxNumber) {
+  let primeNumbers = [];
+
+  for (let number = 2; number <= maxNumber; number++) {
+    let isPrime = true;
+
+    for (let divisor = 2; divisor < number; divisor++) {
+      if (number % divisor === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+
+    if (isPrime) {
+      primeNumbers.push(number);
+    }
+  }
+
+  return primeNumbers;
+}
+
+const primeNumbersUpTo100 = findPrimeNumbers(100);
+console.log(primeNumbersUpTo100);
+
+    </script>
+</body>
+</html>

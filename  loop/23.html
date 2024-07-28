@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let playAgain = true;
+
+while (playAgain) {
+  let playerChoice = prompt("Choose rock, paper, or scissors:");
+  playerChoice = playerChoice.toLowerCase();
+
+  const computerChoices = ["rock", "paper", "scissors"];
+  const computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+  console.log("You chose:", playerChoice);
+  console.log("Computer chose:", computerChoice);
+
+  if (playerChoice === computerChoice) {
+    console.log("It's a tie!");
+  } else if (
+    (playerChoice === "rock" && computerChoice === "scissors") ||
+    (playerChoice === "paper" && computerChoice === "rock") ||
+    (playerChoice === "scissors" && computerChoice === "paper")
+  ) {
+    console.log("You win!");
+  } else {
+    console.log("Computer wins!");
+  }
+
+  const playAgainAnswer = prompt("Do you want to play again? (yes/no)");
+  playAgain = playAgainAnswer.toLowerCase() === "yes";
+}
+
+    </script>
+</body>
+</html>
